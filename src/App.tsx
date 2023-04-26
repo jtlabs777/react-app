@@ -2,7 +2,7 @@ import {MouseEvent} from "react";
 
 function App() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-
+  let selectedIndex = 0;
   //Event handler
   const handleClick = (event: MouseEvent) => console.log(event);
 
@@ -14,7 +14,7 @@ function App() {
         {items.map((item,index) => (
           <li
             key={item}
-            className="list-group-item"
+            className={ selectedIndex === index ? 'list-group-item active' : 'list-group-item'}
             onClick={handleClick}
           >
             {item}
