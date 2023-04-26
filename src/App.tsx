@@ -1,7 +1,10 @@
-import ListGroup from "./components/ListGroup";
+import {MouseEvent} from "react";
 
 function App() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+
+  //Event handler
+  const handleClick = (event: MouseEvent) => console.log(event);
 
   return (
     <>
@@ -12,7 +15,7 @@ function App() {
           <li
             key={item}
             className="list-group-item"
-            onClick={(event) => console.log(event)}
+            onClick={handleClick}
           >
             {item}
           </li>
