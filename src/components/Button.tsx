@@ -1,10 +1,10 @@
 interface ButtonProp {
   children: string;
   handleClick: () => void;
-  color: string;
+  color?: string;
 }
 
-const Button = ({ children, handleClick, color }: ButtonProp) => {
+const Button = ({ children, handleClick, color = 'primary'}: ButtonProp) => {
   return (
     <button type="button" className={`btn btn-${color}`} onClick={handleClick}>
       {children}

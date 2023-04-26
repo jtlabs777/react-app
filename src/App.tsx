@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <Button color="dark" handleClick={handleClick}>My Button</Button>
+      <Button handleClick={handleClick}>My Button</Button>
     </div>
   );
 }
