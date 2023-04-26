@@ -1,24 +1,30 @@
 import ListGroup from "./components/ListGroup";
 
-
 function App() {
-const items = [
-  'New York',
-  'San Francisco',
-  'Tokyo',
-  'London',
-  'Paris'
-]
+  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
 
+  items = [];
 
-return (
-  
-  <>
+  if (items.length === 0) {
+    return (
+      <>
+        <h1>List</h1>
+        <p>No item found</p>
+      </>
+    );
+  }
+
+  return (
+    <>
       <h1>List</h1>
       <ul>
-        {items.map(item => <li key={item} className="list-group-item">{item}</li>)}
+        {items.map((item) => (
+          <li key={item} className="list-group-item">
+            {item}
+          </li>
+        ))}
       </ul>
-  </>
+    </>
   );
 }
 export default App;
