@@ -1,12 +1,12 @@
 
 interface alertProps {
-    text: string;
+    children: string;
 
 }
 
-const Alert = ({text} : alertProps) => {
+const Alert = ({children} : alertProps) => {
   return (
-    <div className="alert alert-primary" role="alert">{text}</div>
+    <div className="alert alert-primary" role="alert">{children}</div>
   )
 }
 
