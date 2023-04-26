@@ -1,6 +1,7 @@
+import { ReactNode } from "react";
 
 interface alertProps {
-    children: string;
+    children: ReactNode;
 
 }
 
