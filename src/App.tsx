@@ -12,7 +12,7 @@ function App() {
           <li
             key={item}
             className="list-group-item"
-            onClick={() => console.log(item +" " + index)}
+            onClick={(event) => console.log(event)}
           >
             {item}
           </li>
