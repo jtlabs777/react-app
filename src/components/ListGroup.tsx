@@ -6,7 +6,7 @@ interface ListGroupProps {
     heading: string;
 }
 
-function ListGroup(props: ListGroupProps) {
+function ListGroup({items, heading}: ListGroupProps) {
   
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
