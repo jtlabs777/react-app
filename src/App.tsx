@@ -1,14 +1,23 @@
+import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 
 function App() {
-  const handleClick = () => {
-    console.log("this works");
-  };
+  const [showButton, setShowButton] = useState(false);
+
+
 
   return (
     <div>
-      <Button handleClick={handleClick}>My Button</Button>
+      {showButton && (
+        <Alert onClose={() => setShowButton(false)}>
+          <span>My Alert</span>
+        </Alert>
+      )}
+
+      <Button color="danger" handleClick={() => setShowButton(true)}>
+        My Button
+      </Button>
     </div>
   );
 }
